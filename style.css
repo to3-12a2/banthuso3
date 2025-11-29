@@ -1,0 +1,293 @@
+body { 
+    margin: 0; 
+    padding: 0;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    overflow: hidden;
+    background: /* Đặt gradient làm background chính */
+        url('bg/flower.jpg') no-repeat center / contain fixed,
+        linear-gradient(to bottom, #ffeaa7, #fab1a0);
+    background-attachment: fixed;
+    background-size: contain;  /* chứa vừa ảnh, không crop */
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow:hidden;
+}
+.square {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 2px solid #f41d09;
+    border-radius: 20%;
+    margin-top: 10px;
+    margin-left: 410px;
+}
+.square img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+}
+.box1 {
+    width: 100px;
+    height:20px;
+    object-fit: cover;
+    border: 2px solid #f42c09;
+    border-radius: 20%;
+    margin-top: -60px;
+    margin-left: 490px;
+    display: flex;
+    justify-content: center;  /* căn ngang */
+    align-items: center;      /* căn dọc */
+}
+.box2 {
+    width: 40px;
+    height:40px;
+    object-fit: cover;
+    border: 2px solid #040404;
+    background-color: rgb(145, 145, 138);
+    border-radius: 20%;
+    margin-top:40px;
+    margin-left:410px;
+    display: flex;
+    justify-content: center;  /* căn ngang */
+    align-items: center;      /* căn dọc */
+}
+.box3 {
+    width: 40px;
+    height:40px;
+    object-fit: cover;
+    border: 2px solid #040404;
+    background-color: rgb(145, 145, 138);
+    border-radius: 20%;
+    margin-top:-170px;
+    margin-left:410px;
+    display: flex;
+    justify-content: center;  /* căn ngang */
+    align-items: center;      /* căn dọc */
+}
+.box4 {
+    position: fixed;
+    width: 38px;
+    height:38px;
+    object-fit: cover;
+    border: 2px solid #040404;
+    background-color: rgb(145, 145, 138);
+    border-radius: 20%;
+    margin-top:8px;
+    margin-left:410px;
+    display: flex;
+    justify-content: center;  /* căn ngang */
+    align-items: center;      /* căn dọc */
+}
+.levelbar {
+    width: 150px;
+    height: 20px;
+    background-color: #444; /* màu nền */
+    border: 2px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 490px;
+    margin-top: -265px;
+    position: relative;
+}
+
+.levelfill {
+    height: 100%;
+    background-color: #f74e9def; /* màu fill */
+    width: 0%;
+    transition: width 0.5s;
+}
+.eeveegif {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-top: 140px;
+    margin-left: 440px;
+}
+.container {
+    width: 80px;
+    height: 230px;
+    border: 2px solid #09f453;
+    border-radius: 20px;
+    margin-top: 1px;
+    margin-left: 605px;
+    background-color: rgba(255, 255, 255, 0.534); /* Màu nền trắng với độ trong suốt */
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap:4px;
+}
+.buttons {  
+            display: flex;
+            border-radius: 10px;
+            flex-direction: column;
+            gap: 7px;
+        }
+.buttons button:hover { transform: scale(1.1); }
+.openBtn {
+        display: flex;
+        border-radius: 10px;
+}
+.taskList {
+    display: none; /* ẩn lúc đầu */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: rgba(255,255,255,0.95);
+    border: 2px solid #09f40d;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+.closeBtn {
+    display: flex;
+    border-radius: 10px;
+    margin-left: 280px;
+}
+/*danh sách nhiệm vụ*/
+.taskList ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-left: -180px;
+    gap: 100px;
+}
+
+.taskList li {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.tasklistbox {
+    font-size: 16px;
+    position: fixed;
+    width: 100px;
+    height: 190px;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: -202px;
+    margin-left: 200px;
+    box-sizing: border-box;
+}
+.buttons-claim {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+.buttons-claim button:hover { transform: scale(1.1); color:#09f40d; }
+.img-box {
+    display: none; /* ẩn lúc đầu */
+    position: fixed;
+    width: 320px;
+    height: 270px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 10px;
+    border:#09f453 2px solid;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+.img-box img {
+    max-width: 300px;
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.shopBox {
+    display: none; /* ẩn lúc đầu */
+    position: fixed;
+    width: 320px;
+    height: 270px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(1, 73, 155);
+    padding: 10px;
+    border:#001105 2px solid;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+.buttons-shop {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 1px;
+}
+.buttons-shop:hover { transform: scale(1.1); }
+.shop-items {
+    display: flex;            /* xếp theo hàng ngang */
+    flex-wrap: wrap;          /* xuống dòng nếu hết chỗ */
+    justify-content: space-around; /* khoảng cách đều nhau */
+    gap: 10px;                /* khoảng cách giữa các item */
+    margin-top: 10px;
+}
+.shop-item {
+    border:#ccc;
+    width: 80px;          
+    height: 100px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 8px;
+    line-height: 13px;
+}
+.shop-item img {
+    width: 70px;
+    height: 40px;
+}
+.shop-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.bought {
+    opacity: 0.5;
+}
+.ball {
+    width: 50px;   /* kích thước khung */
+    margin-top: -135px;
+    margin-left: 450px;
+}
+.ball img {
+    width: 100%;   /* ảnh sẽ nằm gọn trong khung */
+    height: auto;  /* không bị méo */
+}
+#moneyBox {
+    width: 60px;
+    height: 20px;
+    border: 2px solid #09f453;
+    border-radius: 20px;
+    margin-top: -71px;
+    margin-left: 600px;
+    background-color: rgba(255, 255, 255, 0.534); /* Màu nền trắng với độ trong suốt */
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.lv-text {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eevee Career</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ô trạng thái--> 
+    <div class="square"> 
+        <img src="2.jpg" alt="eevee">
+    </div>
+        <div class="box1" style="font-size:10px; color:aliceblue;">
+            <p>Eevee</p>
+        </div>
+        <div class="box2" style="font-size:25px; color:aliceblue;">
+            <div class="buttons">
+                <button class="openBtn" onclick="showTasks()">💬</button>
+            </div>
+        </div>
+        <div class="affectionbar">
+            <div class="affectionfill"></div>
+        </div>
+    <!-- chủ thể-->
+    <div class="eeveegif">
+        <img src="images/eevee-unscreen.gif" alt="eevee">
+    </div>
+    <!-- LEVEL BAR -->
+    <div class="levelbar">
+        <div class="levelfill" id="levelfill"></div>
+        <span class="lv-text" id="lvText">LV 1</span>
+    </div>
+    <!-- tương tác hành động-->
+    <div class="container" style="display: flex; align-items: center;">
+        <div class="buttons">
+            <button style="border: 2px solid; padding:10px; background-color: #f8fe408c; font-family: 'VT323';" onclick="interact('pat')">pat</button>
+            <button style="border: 2px solid; padding:10px; background-color: #f8fe408c; font-family: 'VT323';" onclick="interact('cuddle')">cuddle</button>
+            <button style="border: 2px solid; padding:10px; background-color: #f8fe408c; font-family: 'VT323';" onclick="interact('hug')">hug</button>
+            <button style="border: 2px solid; padding:10px; background-color: #f8fe408c; font-family: 'VT323';" onclick="interact('feed')">feed</button>
+            <button style="border: 2px solid; padding:10px; background-color: #f8fe408c; font-family: 'VT323';" onclick="interact('poke')">poke</button>
+        </div>
+    </div> 
+    <!--list-->
+        <div class="taskList" id="taskList">
+            <span class="closeBtn" onclick="closeTasks()">X</span> 
+        <h3>Daily Quest</h3>
+                <ul type="none" id="missionList">
+                <li data-id="0">Pat (0/10)</li>
+                <li data-id="1">Cuddle (0/10)</li>
+                <li data-id="2">Hug (0/10)</li>
+                <li data-id="3">Feed (0/10)</li>
+                <li data-id="4">Poke (0/10)</li>
+                </ul>
+            <div class="tasklistbox">               
+                <div class="buttons-claim">
+                    <button style="border: 1px solid; padding:3px; background-color: #f8fe40; font-family: 'VT323';" onclick="claimReward(0)">claim</button>
+                    <button style="border: 1px solid; padding:3px; background-color: #f8fe40; font-family: 'VT323';" onclick="claimReward(1)">claim</button>
+                    <button style="border: 1px solid; padding:3px; background-color: #f8fe40; font-family: 'VT323';" onclick="claimReward(2)">claim</button>
+                    <button style="border: 1px solid; padding:3px; background-color: #f8fe40; font-family: 'VT323';" onclick="claimReward(3)">claim</button>
+                    <button style="border: 1px solid; padding:3px; background-color: #f8fe40; font-family: 'VT323';" onclick="claimReward(4)">claim</button>
+                </div>             
+            </div>
+        </div>
+    <!-- Khung popup -->
+     <div class="box3">
+        <button class="buttons-shop" onclick="showImgBox()">📘</button>
+     </div>
+        <div id="imgBox" class="img-box">
+        <span class="close-btn" onclick="closeImgBox()">x</span>
+        <img src="eevee evolute.jpg" alt="Evoluted" 
+        style=" position: fixed;
+                width: 250px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);">
+        </div>
+    <!-- shop-->
+    <div class="box4"> 
+        <button class="buttons-shop" onclick="showShopBox()">🛒</button>
+    </div>
+        <div id="shopBox" class="shopBox">
+        <span class="close-btn" onclick="closeShopBox()">x</span>
+        <h3 style="color:rgb(0, 4, 7); font-family: 'VT323';">Shop coming soon!</h3>
+        <!-- Danh sách vật phẩm -->
+            <div class="shop-items" id="shopItems">
+            <!-- JS sẽ render vật phẩm ở đây -->
+            </div>
+    </div>
+    <!--ball-->
+        <div class="ball" >
+            <img src="ball-removebg-preview.png">
+        </div>
+    <!--money-->
+    <div id="moneyBox" style="font-size: 10px;"> 
+        💰<span id="money">0</span>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
